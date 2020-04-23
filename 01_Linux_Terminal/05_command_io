@@ -1,0 +1,40 @@
+Command Input and Output
+	- There are two ways a command can take input and two way a command can
+	give output.
+
+
+				 _______________
+Standard input (0) - - - - - -> |		| - - - - -> Standard output (1)
+				|		|
+				|    Command	|
+Command				|		|
+line	  --------------------> |		| - - - - -> Standard error (2)
+arguments			|_______________|
+
+
+Key:
+- - - ->    Standard Data Stream (0, 1, 2)
+------->    Not a Data Stream
+
+
+
+The Standard output is given when the command is run successfully and the Standard
+error is given when the command deals with an unwanted situation and thus cannot
+continue its desired functionality.
+Both Standard output and Standard error connects to the Standard Data Stream which
+by default flows to the terminal. 
+This flow however can be changed so that the data from one command flows directly
+into the other command, this concept of chaining the commands is called Piping.
+The flow can also be redirected towards the files rather than the default termianl
+and is called Redirecting.
+
+The Standard input is the input given to any command using the Standard Data Stream
+which by default is connected to the terminal.
+This flow of input however can also be changed using Pipelining.
+Though not all commands accept the Standard input.
+
+Command line arguments are the inputs that are feeded in the command directly using
+the command line.
+These arguments are more of a input that are to be given explicitly and thus concept
+of Pipelining is not applied on them.
+Almost all of the commands accept Command line arguments.

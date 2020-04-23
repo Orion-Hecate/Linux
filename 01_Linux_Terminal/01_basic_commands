@@ -1,0 +1,92 @@
+<>			- mandatory argument
+[]			- optional argument
+[|]			- one or the other argument can be used in optional argument
+
+Ctrl + Alt + T		- to open the terminal
+
+echo data		- give the output as it is on the console
+
+
+man command		- give the manual of the command
+man [section] <command>	- give the manual of the command
+man -k apropos_string	- search for the apropos_string in the command's manual name
+			and return all the commands matching to that string.
+
+
+help			- give the information about some workings of the shell like
+			loops and test condition, etc. and also tells about all the
+			built-in commands that are supported by help.
+help [command]		- give the information about some built-in-commands
+
+
+<command> --help	- give the documentation about the format of the command
+			as well as about the format controls as described in the
+			command or application.
+
+
+info command		- give the information of the command
+
+
+cal			- gives the current month calendar
+cal [year]		- gives calendar of all the months of the given year
+cal [-y]		- gives calendar of all the months of the current year
+cal [month] [year]	- give the specific month calendar
+cal [-A] [number]	- give the calendar of the currnet month and the number
+			of months after that month based on the number
+cal [-A] [number]
+	[year]		- give the calendar of all the months in the year and
+			the calendar of the number of months after that year
+			based on the number
+cal [-A] [number] [month] 
+	[year]		- give the calendar of the specific month and the number
+			of months after that month based on the number
+cal[-B]	[number]	- give the calendar of the current month and the number
+			of months before that month based on the number
+cal [-B] [number]
+	[year]		- give the calendar of all the months in the year and
+			the calendar of the number of months before that year
+			based on the number
+cal [-B] [number] [month]
+	[year]		- give the calendar of the specifc month and the number
+			of months before that month based on the number 
+
+
+date			- give the current date
+date [-u]		- give the UTC current date
+date [--utc]		- give the UTC current date
+date [--universal]	- give the UTC current date
+
+clear			- to clear the screen
+Ctrl + L		- to clear the screen
+
+history			- to see all the previous commands
+history [-c]		- clears the history
+!command_no.		- again execute that command
+!!			- again execute, the most recent command
+
+
+which command		- gives the folder in which command exist
+which command ...	- give the folder in which each command exist
+
+
+pwd			- give the present working directory
+
+
+ls			- give the current directory contents
+ls [dir_name]		- give the directory contents of the specified
+			directory
+ls [dir_name] ...	- give the directory contents of all the specified
+			directories
+
+
+tty			- teletype, gives the file name of terminal that is
+			connected to the standard data stream
+
+
+cat			- concatenate files and print on the standard output
+cut <-d delimiter>	
+    <-f field_number>	- remove sections from each line of files
+
+
+exit			- to close the terminal
+Ctrl + D		- to close the termial

@@ -1,0 +1,60 @@
+Redirection
+	- It is about changing the default flow location of the Standard data stream.
+	- In the Standard data stream, we can redirect the standard input stream by
+	using stream-0, standard output stream by using stream-1 and standard error
+	stream using stream-2.
+
+
+
+cat command
+	- cat, by default takes the input from the terminal and gives the output to
+	the terminal.
+
+	- we can change the flow location of standard output to a file using the
+	following command.
+		cat 1> output.txt
+		cat 1>output.txt
+		cat > output.txt
+		cat >output.txt
+	In all the mentioned ways we can directly save the input typed in the
+	terminal in the file output.txt instead of showing at the terminal.
+	Writing 1 before > is optional as by default the stream-1 is selected.
+	Also, there cannot be a space between 1 and >.
+
+	- By default, this redirection, truncates the already written text in the
+	file. For Appending the data, we can use the following command.
+		cat 1>> output.txt
+		cat >> output.txt
+
+	- we can also change the flow loation of standard error to a file using
+	the following command.
+		cat [-k yo] 2> error.txt
+		cat [-k yo] 2>> error.xt
+	In this case typing 2 is compulsory to denote the stream for standard
+	error. This methodology of recording error is usually come in handy to
+	keep track as a log file.
+
+	- Also we can simultaneously redirect both the stream-1 and stream-2
+	using the following command.
+		cat 1>> output.txt 2>> error.txt
+
+	- Now for redirecting the input stream we can sue the following command.
+		cat 0< input.txt
+		cat < input.txt
+		cat input.txt
+	By default and the only value of stream available is 0, so writing 0 is
+	not necessary. For input we use < operator before the file we want to
+	take the input from. In above example we get output on the terminal as
+	default standard output stream is terminal.
+	Also without redirecting the input stream we can give the input using
+	command line argument as well.
+
+	- So combining, what we know from above, the following command takes the
+	input from the input.txt and append it in the output.txt and any error
+	occured in betweem will be appended to the error.txt
+		cat < input.txt >> output.txt 2>> error.txt
+	
+	- You can also redirect the output to another terminal window by first
+	getting the location of the file of that terminal using the tty command
+	and then putting that path in output path of the statement.
+		cat < input.txt >> /devs/pts/1

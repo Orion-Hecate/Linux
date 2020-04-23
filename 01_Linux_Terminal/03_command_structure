@@ -1,0 +1,33 @@
+Structure of the Commands (commandName option inputs)
+	- All commands are little computer programs stored in our computer.
+	- The first part of the command is the name of the program that we
+	want to run.
+	- Each command has its own unique behaviour, that we can see using
+	manual page.
+	- The second part of the command is option.
+	- The third part of the command is inputs.
+	- The second and thrid 
+
+How the command is searched?
+	- Out of all the paths present in the ~/.bashrc file, the shell will
+	start finding the command from the left-most folder.
+	- If the command is not found in any of those folders or in the current
+	folder, then the shell will give an error on the terminal, i.e.,
+	command not found.
+	- If the entered command having different version in different folders
+	then the one found first will be executed.
+	- We can see the folder in which the command exist using, which command.
+	
+Based on the command both the options or inputs can be optional or compulsory.
+
+Inputs are given just by giving the space between the previously written
+command text and the value of input (argument).
+
+Options are also given by giving the space between the previously written
+command text and the option while the option is preceeded by a hyphen.
+
+Some times command have long names as well, those options are preceeded by
+double hyphen.
+
+Short form options can be chained together while long form options can't be
+changed together.

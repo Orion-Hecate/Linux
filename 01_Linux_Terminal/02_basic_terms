@@ -1,0 +1,14 @@
+Command and Shell
+	- The commands are just text having some particular functionality for
+	its interpreteer, but when we press enter the meaning of that text is
+	interpreted by a computer program called shell.
+
+Terminal
+	- It is a platform or middle-piece on which we can type the command
+	which then gets forwarded to the shell for interpretation and the
+	result returned from the shell gets shown in the terminal.
+
+There are different kinds of shell - Bash shell being the most common one of
+them.
+
+Commands are case-sensitive.

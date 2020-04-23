@@ -1,0 +1,12 @@
+Aliases
+	- It is the alternate name given to some context or in this case
+	commands.
+
+	- It is useful when we want to use some long piped commands frequently,
+	so we can give them an alias name that is easy to remember and can
+	directly call it.
+
+	- For this, first we can create an .bash_aliases file in which we will
+	store our piped commands for whom we want to create aliases.
+
+	

@@ -1,0 +1,23 @@
+Structure of the Linux File System
+	- The entire linux file system follows a tree structure.
+	
+	- top: / (root directory or folder)
+	- in root: bin, boot, dev, etc, home, media, lib, mnt, root, usr, var, ...
+	- in home: user1, user2, ...
+	- in user: Desktop, Documents, Downloads, Music, Pictures, Public, Templates, Videos, ...
+
+	- Anything inside a user's folder is specific to that user while anything above that folder
+	affects the whole system or the root folder.
+
+	- So special files required for the system are placed in the root folder and in order to
+	access them or to change them we required the root access (or root password, i.e., elevated
+	privileges).
+
+
+
+Root directory contents
+	- /		The very top (root) of the file tree. Holds everything else.
+	- /bin		Stores common user linux command binaries.
+	- /boot		Bootable linux kernel ad bootloader config files.
+	- /dev		Files representing devices, tty (teletype) = terminal, fp = floppydisk,
+			sd or hd = harddisks, ram = RAM

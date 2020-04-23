@@ -1,0 +1,41 @@
+Manual is implemented using man command
+
+man vs help vs info
+	- man is a system-wide documentation system thatprovides short reference
+	manuals (pages) for individual commands. API functions, concepts,
+	configuration file syntax, file formats organized in section. That's
+	traditional Unix documentation system.
+
+
+	- help is a built-in command in the bash shell (and that shell only)
+	that documents some of the built-in commands and keywords of that shell.
+	
+	That's an internal documentation system of that shell.
+	
+	Some built-in commands do not have a manual page, so information about
+	that can be get using help command.
+	
+	We can know which all commands have the help page, by simply running
+	the help commmand alone.
+
+	It also provides description about the loops and other workings of the
+	shell if run alone.
+
+
+	- info is another documentation system originating in the GNU project.
+	It's hypertext with links (predates the web). An info manual is like a
+	digital book with a concept of table of contents and (searchable) index
+	which helps locating the information.
+
+
+
+Manual Structure
+	Section		Contains
+	   1	      User Commmands
+	   2	      System Calls
+	   3	    C Library Functions
+	   4	  Services and Special Files
+	   5	  File Formats and Conventions
+	   6	          Games
+	   7	      Miscellanoues
+	   8	  System Administration

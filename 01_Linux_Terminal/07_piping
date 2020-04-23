@@ -1,0 +1,79 @@
+Piping
+	- It is the chaining of commands by redirecting the flow of inputs and
+	outputs, i.e., Standard data stream as per our use. With this we can
+	directly make the output of one command the input of the other command.
+
+
+	- examples:
+		- date | cat >> date.txt
+		- date >> date.txt
+		The above two commands will get the current date and append it
+		to the date.txt file.
+
+		- cut -d ' ' -f 1 date.txt
+		- cut < date.txt -d ' ' -f 1
+		In the above code we use the space to separate the words in each
+		line and we get the first column from each line as the output.
+		In the first code input is given as a command line argument while
+		in second the redirection is used.
+		Above code can be modified with piping as follows:
+			date | cut -d ' ' -f 1
+
+		- date | cut -d ' ' -f 1 >> day.txt
+		- date | cut -d ' ' >> day.txt -f 1
+		This will store the day part of the current date to a day.txt file.
+		Also we don't have to worry much of the sequence in this above example.
+
+
+	- tee command piping
+		- When we want to execute a command and wants it output to not only
+		chain with the next command but also the same output to flow into
+		another chained command we use tee command. 
+		
+		- This is the case when one of the chained command is to write the
+		standard output and files.
+	
+		- example:
+			date | tee date.txt | cut -d ' ' -f 1
+		The above command will save the current full date to the fulldate.txt
+		file and also give that data to the cut command which then give us the
+		result, i.e., the first column of the line on the Standard output
+		stream that is by default the terminal.
+	
+			date | tee date.txt | cut -d ' ' -f 1 > day.txt
+		This command will instead of showing the horizontal flow result on the
+		screen will save it to the day.txt file.
+
+			date | tee -a date.txt | cut -d ' ' -f 1 >> day.txt
+		This command is same as the above with the only difference is that the
+		results will be appended in both the files instead of truncating.
+
+		- Note:
+		Redirection is used when we don't want to do further piping, i.e., in
+		the last of the command. If we want to continue piping, instead of
+		redirection we will again use the tee command.
+
+
+	- xargs pipinng
+		- This is used when we want to continue our piping and there are some
+		commands to use which only takes comand line argmuents.
+
+		- example:
+			date | xargs echo
+		Above code, takes the current date and pass it as xargs to the echo
+		which then the echo takes in as a command line argument and process
+		it.
+
+			date | xargs echo Date:
+		In above code echo takes both direct command line argument and also
+		indirect xargs command line argument. But the command first processes
+		its own or direct command line argument and then the args one.
+
+			date | cut -d ' ' -f 1 | xargs echo Day:
+		Takes the current date value and then pipe it into cut command to get
+		the day out of it and then pass it as an xargs for the echo command.
+
+			cat files_to_del | xargs rm
+		rm comand also takes in only command line argument. So, the files to
+		be deleted are written in the files_to_del file which is read using
+		cat and those values are pipe into xargs which then given to rm.
