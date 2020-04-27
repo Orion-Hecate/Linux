@@ -1,0 +1,20 @@
+cp Command
+	- In order to copy a file, we can use the following command:
+		cp file1 file2
+	In this the file1 is the original file while the file2 will be the copied file.
+
+	- We can also copy anything from some destination to other destination as folows:
+		cp path1/file1 path2/
+		cp path1/file1 path2/file2
+
+	- We can also copy multiple file from one or more destination to other destination as
+	follows:
+		cp path1/file1 path2/file2 destination_path/
+	
+	- Copying all files from some source to the current directory
+		cp source_path/* .
+	
+	- In order to copy a folder to other we have the following command:
+		cp -r folder1/ folder2/
+	In this the r option is the recursive option, which first copies everything - files and
+	folders.

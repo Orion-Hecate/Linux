@@ -21,8 +21,11 @@ rm Command
 
 
 
-	- rm -r Command
-		- It is used to reomve the directories.
+	- Now we can remove a Directory also, using the following command: 
+		rm -r
+		
+		- In this the r option is the recursive option, which removes all the files and
+		folders.
 
 		- Example:
 			rm -r dir_path
