@@ -1,0 +1,38 @@
+mv Command
+	- This command can be used to rename file or directory.
+	
+	- Examples:
+		mv old_name.txt new_name.txt
+		mv oldFolder/ newFolder
+	The above command is used to rename a file from old_name to new_name in the same directory
+	and the oldFolder directory to a directory with name newFolder in the same current directory.
+
+
+
+	- We can also move the files or folders from one directory to another directory.
+
+	- Examples:
+		mv file_name1.txt destination/
+	The above code moves the file from current directory to destination directory.
+
+		mv file_name1.txt file_name2.txt destination/
+	The above code moves multiple files.	
+
+		mv folder/* destination/
+	The above code moves all the files in folder to the destination folder.
+
+		mv folder/ destination/
+	The above code move the whole folder from current directory to the destination directory.
+
+
+	
+	- We can also move and rename the file or folder at the same time.
+
+	- Examples:
+		mv file1.txt destination/file2.txt
+	It will move the file1.txt to the destination folder and also there should not be any
+	file2.txt beforehand and because of which, shell will rename file1.txt as file2.txt
+
+		mv folder/ destination/newFolder
+	It will move the folder to the destination folder and also there should not be any newFolder
+	beforehand and because of which, sell will rename folder as newFolder.

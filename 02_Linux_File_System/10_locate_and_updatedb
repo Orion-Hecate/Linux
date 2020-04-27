@@ -1,0 +1,41 @@
+locate Command
+	- We will give a patter to search to the locate command and it will search the whole database
+	to find the files matching that pattern.
+
+	- Example:
+		locate *.conf
+	The above code gives all the files ending with .conf
+		
+		locate -c *.conf
+	The above code give only the count of all the files ending with .conf
+
+		locate -i *.CONF
+	The above code uses the ignore-case option, since by default locate is case sensitive.
+
+		locate -l 3 *.conf
+	The above code uses the limit option, to limit the search to first 3 matches.
+
+		locate -S
+	The above code gives the statistics of the database, i.e., the number of directories, files,
+	bytes in file names and bytes used to store database along with the path to the database
+	file.
+	
+		locate -L *.conf
+	This checks that if there are any symbolic links, they arrive somewhere and are not just
+	dangling before reporting them back.
+
+		locate -e *.conf
+	This prints only the files that are present at the time locate is run.
+
+
+
+updatedb Command
+	- used to update the database.
+
+	- it uses elevated administrative privileges to run.
+	
+	- Examples:
+		touch findme.txt
+		updatedb
+		locate findMe.txt
+	The above code first creates the file, then update the database and then locate the file.

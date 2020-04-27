@@ -1,0 +1,31 @@
+nano Command
+	- This command helps in making the text files as well as in editing them.
+
+	- It consists of toolbar at the bottom of the page, having some shortcuts or features to be
+	used.
+
+	- In this toolbar the symbols are read as follows:
+		^ - Ctrl
+		M - Alt
+
+	- To write out (or save) a file we use Ctrl-O.
+	- To exit a file we use Ctrl-X.
+	- To read a file (or copy the content of some other file in here) we use Ctrl-R. It takes the
+	path of the file form current directory.
+	
+	- To cut a data we use Ctrl-K.	
+	- T uncut (or paste) a data we use Ctrl-U.
+	
+	- In order to search for some data we can use Where is feature using Ctrl+W. It searches in
+	a case-insensitive manner by default.
+
+	- In order to replace we use the command Ctrl+\ and then type the word we want to replace
+	and the nano will go through each instance of that word and ask which one or more of the
+	matched words to replace with the new word that we will enter or we can replace all the
+	occurrences as well.
+
+	- Ctrl-T is used for Spell Checking. If the spell cheecker is not located yet, we can set
+	it up by removing the aspell command in /etc/nanorc from comments to normal code.
+
+	- Alt-U is used for Undo.
+	- Alt-E is used for Redo.
