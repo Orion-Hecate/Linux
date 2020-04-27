@@ -1,0 +1,55 @@
+touch Command
+	- It is used to create files.
+		touch file_name
+
+	- If we want to create file in a distant folder we can create as follows:
+		touch path/file_name	
+
+	- Another way of creating files is by using cat command or echo command along with the 
+	redirection to the file_name. If the file is not yet created, shell will create it first
+	and then stored the content to the file passed by the cat command or the echo command.
+		echo hello > file_name
+		
+		cat > file_name
+		(then take the content from shell)
+
+
+
+mkdir Command
+	- It is used to make directory.
+		mkdir dir_name
+
+	- If we want to create directory in a distant folder we can create it as follows:
+		mkdir path/dir_name
+	
+	- If we want to make nested directories (or the path till the last directory) we can use
+	the -p option as follows:
+		mkdir -p path/dir_name
+
+
+
+Brace Expansion
+	- Brace expansion is used to give all the possible values across various sets like that of
+	in a Cartesian Product of various sets.
+
+
+	- Example of making a large directory using brace expansion:
+	    mkdir {jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_{2020,2021,2022,2023,2024,2025}
+	    mkdir {jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_{2020..2025}
+	The above code will give the 72 folders with jan to dec each having prefixes from 2020 to
+	2025.
+	
+	    touch {jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec}_{2020..2025}/file{1..100}.txt
+	The above code makes 100 files in each of the folders that we made above, naming from
+	file1.txt ot file100.txt.
+
+
+	- Note:	Here, .. is the range symbol denoting all the values in betweem the initial and the
+	final values given  while as we know already ... is ellipsis symbol which means multiple
+	values in function or command.
+
+
+	- Brace Expansion can be used with other commands as well. For example:
+		ls {mar,aug,oct}_{2022..2025}
+	The above code will list the content of only the selected directories that is extracted
+	from brace expansion.

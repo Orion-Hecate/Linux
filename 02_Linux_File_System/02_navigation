@@ -1,0 +1,77 @@
+pwd Command
+	- Tells us where we are currently in the file system.
+	
+	- Shell also tell us this as:
+		user@computer:pwd$
+		user@computer:~$
+		orion@hecate:~$
+	In this user is the username of the user that is logged in followd by @ (at) symbol. Then we
+	got the computer name followed by the colon and then we have the pwd (present working
+	directory), which is initially the user folder in the home directory represented by the
+	tilde (~) symbol.
+
+
+
+ls Command
+	- It lists out the directory contents of the given directory path (by default it is set to
+	the current directory).
+
+	- Examples:
+		ls /home/user
+		ls ~
+		ls
+	All above three will give the contents of the user directory. If we are in the user directory
+	then we can just use the ls command.
+	
+		ls -F
+	By default, the Directory is shown with blue color to distinguish the difference between a
+	directory and file as file is shown with white color. We can use F option i.e., classify,
+	to make the Directories being distinguish as a forward slash will proceed them.
+
+		ls -l
+	This gives us the detailed information about the directory contents. 
+	
+	At the starting of the line, we have a 10 characeer long string denoting the property of
+	the content. 
+		- First character is a 'd' if the content is a directory else '-' if content is a
+		file.
+		- Then the rest of the 9 characters in the string are a group of three characters
+		each. First character in the group denotes the reading permission, Second character
+		denotes the writing permission and the Third character denotes the executing
+		permission of the file.
+		- The First group is for the User, the Second group is for the Group in which the
+		user is and the Third group is for everyone else.
+	
+	After that we got the number of files present in that content. For file it is 1 since it
+	does not hold any other content (like - other files or dir.) inside it. For a directory by
+	deafult this value is 2 (that are the hiddent contents -> . for same directory and .. for
+	the previous directory) and can be increased based on how many files or directory it stores.
+	 
+	Then we the User name followed by the Group name followed by the how large the file in bytes
+	and is followed by the date-time of last edit of the file followed by the file name.
+	
+		ls -lh
+	It is same as of teh above only the added h denotes the human redable language, which changes
+	the date of bytes in the size denoting prefixes.
+
+		ls -a
+	It is used to show all the files including the hidden ones.
+		
+
+
+cd Command
+	- It is used to change the directory to move around in the linux file system.
+		cd file_path
+	- 'tab compeletion' can be done by typing a part of the file path and then pressing the tab
+	button to complete the rest of the file path.
+
+	- If there are multiples files with the common part for their file names, the single tab will
+	not work. We can do a double tab to see all the possibilites we have for our file name and
+	can then prceed further.
+
+
+
+Paths
+	- There are two types of path:
+		- Absolute path, that starts at the base (/) directory.
+		- Relative path, that starts from the current directory.

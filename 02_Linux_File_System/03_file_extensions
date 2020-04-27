@@ -1,0 +1,18 @@
+file command
+	- This commad is used to determine the file type.
+		ls file_name
+
+
+
+File extensions in Linux
+	- Now even if we say for example change the extension of a .png file to .jpg file it still
+	works. But when we use the file command on that file even after changing the extension, it
+	will give the file type as -> PNG image data. This is because every file has a header at the
+	starting in the file which stores the type information for that file.
+
+	- Now for another example, we have a text file. If we change the extension of it to pdf and
+	opens it using the GUI, it will give the error. Since the GUI will see the extension of the
+	file as the pdf and open the file in a pdf-viewer but in real the file is a text file, so
+	a pdf-viewer cannot read it. This is because the Linux knows the real file extension but
+	other softwares installed in Linux for GUI purposes do not know that and need a specific
+	file extension to open corresponding files.

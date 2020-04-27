@@ -9,4 +9,5 @@ Aliases
 	- For this, first we can create an .bash_aliases file in which we will
 	store our piped commands for whom we want to create aliases.
 
-	
+	- This .bash_aliased file should be made in the user home diretory, so that the shell can
+	get the access of it for the whole user.

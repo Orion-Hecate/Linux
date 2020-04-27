@@ -79,6 +79,9 @@ ls [dir_name] ...	- give the directory contents of all the specified
 			directories
 
 
+cd file_path		- change directory
+
+
 tty			- teletype, gives the file name of terminal that is
 			connected to the standard data stream
 
@@ -86,6 +89,18 @@ tty			- teletype, gives the file name of terminal that is
 cat			- concatenate files and print on the standard output
 cut <-d delimiter>	
     <-f field_number>	- remove sections from each line of files
+file <file_name>	- gives the type of the file
+
+
+touch file_name		- creates a new file
+mkdir dir_name		- creates a new directory
+
+
+rm [file_path] ...	- used to remove files
+rm -r [dir_path] ...	- used to remove directories
+rm -ri [dir_path] ...	- used to remove directories interactively
+rm -rf [dir_path] ...	- used to remove directories forcefully without asking
+rmdir [dir_path] ...	- used to remove empty directories only
 
 
 exit			- to close the terminal

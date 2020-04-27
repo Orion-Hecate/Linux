@@ -20,4 +20,24 @@ Root directory contents
 	- /bin		Stores common user linux command binaries.
 	- /boot		Bootable linux kernel ad bootloader config files.
 	- /dev		Files representing devices, tty (teletype) = terminal, fp = floppydisk,
-			sd or hd = harddisks, ram = RAM
+			sd or hd = harddisks, ram = RAM, cd = CD-ROM
+	- /etc		Administrative configuration files. The format for many of these
+			configuration can be found in section 5 of the Linux manual.
+	- /home		Where the home directories for regular user are stored.
+	- /media	Unlike /dev, /media is usually where removable media (USB sticks, external
+			hard drives, etc.) are mounted.
+	- /lib		Contains shared libraries needed by applications in /bin and /sbin to boot
+			the system.
+	- /mnt		A place to mount external devices. This can still be used but has been
+			superseded by /media.
+	- /misc		A directory used to sometime automount filesystems on request.
+	- /opt		Directory Structure used to store additional (i.e., optional) software.
+	- /proc		Information about system resources.
+	- /root		The home folder for the root user a.k.a the superuser
+	- /sbin		Contains administrative commands (binaries) for the root (super) user.
+	- /tmp		Contains temporary files used by running applications/
+	- /usr		Contains files pertaining to users that in theory don't change after
+			installation.
+	- /var		Contains directories of variable data that could be used by various
+			applications. System log files, are usually found here.
+

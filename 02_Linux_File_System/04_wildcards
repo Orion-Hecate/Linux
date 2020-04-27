@@ -1,0 +1,47 @@
+Wildcards
+	- A wildcard in Linux is a symbol or a set of symbols that stands in for other characters.
+	It can be used to substitute for any other character or characters in a string.
+	For example, you can use a wildcard to get a list of all files in a directory that begin with
+	the letter O.
+
+	- It is used to make regular expression on based on which can generalize the type of data we
+	want to work on.
+
+
+	- Regular Expressions
+		- A regular expression is a sequence of characters that define a search pattern.
+		Usually such patterns are used by string searching algorithms.
+		
+		- Since in regular expression * shows the zero or more occurences, i.e., we can have
+		any string even the empty one in place of it.
+
+		- Similar to * is the ? wilcard which matches for any string but is used for zero or
+		one occurence, though in linux it denotes for one occurence.
+
+		- [] wildcard is similar to ? as it only matches one place, but instead of matching
+		any string or character it matches the regular expression passed inside of those
+		square brackets.
+
+
+	- Examples:
+		ls Documents Downloads Desktop -> ls D*
+	Instead of typing every folder name that starts with a D we can just write D* which gives us
+	all the Directories having the first letter as D.
+		
+		ls Do*
+	Instead of giving all the folders starting from D it give us now all the folders starting
+	from the Do i.e., Documents and Downloads in general home directory case.
+
+		ls ?.txt
+	This will give a file that is .txt file with a name length of only 1 charcter.
+	
+		ls file[0-9].txt
+	This will give a file that is named as file followed by one number from any 0-9 series
+	followed by .txt extension.
+	
+		ls file[0-9]*.txt
+	This will give a file that is names as file followed by zero or more numbers from any 0-9
+	series followed by .txt extension.
+
+
+	- This method of finding file names with the help of wildcards is called as globbing.
