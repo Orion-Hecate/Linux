@@ -96,6 +96,9 @@ touch file_name		- creates a new file
 mkdir dir_name		- creates a new directory
 
 
+wc file_name		- gives the word count of the file
+
+
 rm [file_path] ...	- used to remove files
 rm -r [dir_path] ...	- used to remove directories
 rm -ri [dir_path] ...	- used to remove directories interactively

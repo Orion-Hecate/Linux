@@ -1,0 +1,47 @@
+find Command
+	- searches for files and directories in a directory hierarchy
+
+	- default behavour: If we just run the find command, it will give all the files and folders
+	in our current working directory till the hierarchical end.
+
+	- For the find command, we have long form options with only single hyphon.
+
+	- Examples:
+		find . -maxdepth 1
+	The above code will find all the files and directories from the current working directory
+	till 1 level deep in the hierarchical file system.
+
+		find . -type f
+	The above code will find all the files from the current working directory till the
+	hierarchical end.
+
+		find . -type d
+	The above code will find all the directories from the current working directory till the
+	hierarchical end.
+
+		find . -name file_name
+	The above code will find for the files or directory with the given name, starting from the
+	current working directory in the hierachical order till end.
+
+		find . -iname file_name
+	It searches in a case-insensitive manner.
+
+		find . -size +10k
+	The above code will find for the files or directories with the size greater than the 10k in
+	the hierarchical depth till end.
+
+		find . -size -10k
+	The above code will find for the files or directories with the size less than the 10k in
+	the hierarchical depth till end.
+
+		find . -size -10k -type f | wc -l
+	The above code will give the files less than 10k and pass it to the wc command which will
+	then give the count of line we get as an output from the find command.
+
+		find . -size +10k -size -100k
+	The above code will give the files or directories with a size more than 10k and less than
+	100k in the hierarchical depth till end.
+
+		find . -type f -size -10k -o -size +100k | wc -l
+	The above code will give the count of files that are either less than 10k or greater than
+	100k in the hierarchical depth till end because of the o option.
